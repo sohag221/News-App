@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/headlineFragment">
+    <fragment
+        android:id="@+id/articalFragment"
+        android:name="com.example.thenewsapp.ui.fragments.ArticalFragment"
+        android:label="ArticalFragment" >
+        <argument
+            android:name="artical"
+            app:argType="com.example.thenewsapp.models.Article"/>
+    </fragment>
+    <fragment
+        android:id="@+id/headlineFragment"
+        android:name="com.example.thenewsapp.ui.fragments.HeadlineFragment"
+        android:label="HeadlineFragment" >
+        <action
+            android:id="@+id/action_headlineFragment_to_articalFragment"
+            app:destination="@id/articalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.example.thenewsapp.ui.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment2_to_articalFragment"
+            app:destination="@id/articalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.thenewsapp.ui.fragments.FavouriteFragment"
+        android:label="FavouriteFragment" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_articalFragment"
+            app:destination="@id/articalFragment" />
+    </fragment>
+</navigation>
